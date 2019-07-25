@@ -74,13 +74,13 @@ def remove_files(list_lst):
 
 
 def connect():
-    u_host = '192.168.1.182'
+    u_host = '192.168.1.2'
     u_user = 'user'
     u_pass = 'pass'
     cnopts = pysftp.CnOpts()
     cnopts.hostkeys = None
     with pysftp.Connection(host=u_host, username=u_user, password=u_pass, cnopts=cnopts) as sftp:
-        sftp.put(r'test.xml', r'/home/hich/incoming/t.xml')
+        sftp.put(r'test.xml', r'/home/user/incoming/t.xml')
 
 
 f = open('report.csv', 'w')     # Creating of CSV report file
